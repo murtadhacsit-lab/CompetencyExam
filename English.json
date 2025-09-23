@@ -1,0 +1,1058 @@
+{
+  "quiz_title": "الاختبار الوطني للغة الانكليزية - استاذ سعد",
+  "questions": [
+    {
+      "id": 144,
+      "question": "الفعل left بالماضي .. طيب ماهو شكل الفعل بالمضارع",
+      "options": {
+        "أ": "leave",
+        "ب": "lefts",
+        "ج": "aliive"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 145,
+      "question": "Transform the sentence to passive: \"They are cleaning the house\"",
+      "options": {
+        "أ": "The house is cleaned by them",
+        "ب": "The house is being cleaned by them",
+        "ج": "The house is cleaning by them",
+        "د": "The house was cleaned by them"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 146,
+      "question": "Shall we go to a restaurant -------------- to a near park?",
+      "options": {
+        "أ": "But",
+        "ب": "So",
+        "ج": "And",
+        "د": "Or"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 147,
+      "question": "--------------------- these days",
+      "options": {
+        "أ": "I never a newspaprr buy",
+        "ب": "I never buy a newspaper",
+        "ج": "I buy never a newspaper",
+        "د": "Never I buy a newspaper"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 148,
+      "question": "Your friend is having lunch with your boss. Express your jealousy",
+      "options": {
+        "أ": "I'm not jealous. I've never eaten lunch with the boss",
+        "ب": "I'm jealous I've never eaten lunch with the boss",
+        "ج": "I'm jealous I've ever eaten lunch with the boss",
+        "د": "I'm jealous I've never eaten supper with the boss"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 149,
+      "question": "electricity معنى",
+      "options": {
+        "أ": "خشب",
+        "ب": "كهرباء",
+        "ج": "ماء"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 150,
+      "question": "A minute is",
+      "options": {
+        "أ": "20 seconds",
+        "ب": "30 seconds",
+        "ج": "60 seconds"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 151,
+      "question": "معنى الفعل يشحن",
+      "options": {
+        "أ": "charge",
+        "ب": "wipe",
+        "ج": "plant"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 152,
+      "question": "Speaker A: What is the best way to enjoy school? Speaker B: Get good marks and pass exams. Speaker A:……………………. Speaker B: Yes, We feel alone otherwise.",
+      "options": {
+        "أ": "And playing games",
+        "ب": "And doing homework of course",
+        "ج": "What about making friends",
+        "د": "Are they enough"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 153,
+      "question": "I like your hair. Where…………….?",
+      "options": {
+        "أ": "did you cut",
+        "ب": "does cut it",
+        "ج": "do you have it cut",
+        "د": "do you have cut"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 154,
+      "question": "briefly is",
+      "options": {
+        "أ": "is a slow way",
+        "ب": "in a quick way"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 155,
+      "question": "The past form of the verb sleep is",
+      "options": {
+        "أ": "sleeped",
+        "ب": "slept",
+        "ج": "slepted"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 156,
+      "question": "Jorge usually takes a nap",
+      "options": {
+        "أ": "present simple",
+        "ب": "present continuous",
+        "ج": "future simple"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 157,
+      "question": "معنى lunch",
+      "options": {
+        "أ": "عشاء",
+        "ب": "يطلق",
+        "ج": "ينام",
+        "د": "غداء"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 158,
+      "question": "the match starts at 8 p.m",
+      "options": {
+        "أ": "where is the match taking place?",
+        "ب": "when is the match?",
+        "ج": "How is the match?"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 159,
+      "question": "change to passive: the police have arrested the criminals",
+      "options": {
+        "أ": "The criminals are arrested by the police",
+        "ب": "The criminals have arrtesting by the police",
+        "ج": "The criminals have been arrested by the police"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 160,
+      "question": "I don't know anything about the answers of today's exam",
+      "options": {
+        "أ": "to express indifference",
+        "ب": "to express disgust",
+        "ج": "to express lack of knowledge",
+        "د": "to express fear"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 161,
+      "question": "I'm sorry for telling your father about the issue. It has just slipped by mind that it is a secret that I should have kept",
+      "options": {
+        "أ": "the man didn't reveal the secret",
+        "ب": "the man forgot that he must keep the secret",
+        "ج": "The father was angry about the problem",
+        "د": "I can't say that again"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 162,
+      "question": "interesting is:",
+      "options": {
+        "أ": "adjective to describe",
+        "ب": "adverb of place",
+        "ج": "dynamic verb"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 163,
+      "question": "The present form of \"saw\" is",
+      "options": {
+        "أ": "sawing",
+        "ب": "see",
+        "ج": "saws"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 164,
+      "question": "اشترى",
+      "options": {
+        "أ": "buy",
+        "ب": "buying",
+        "ج": "bought"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 165,
+      "question": "The past participle of \"go\"",
+      "options": {
+        "أ": "went",
+        "ب": "goed",
+        "ج": "gone"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 166,
+      "question": "postcard",
+      "options": {
+        "أ": "بطاقة شخصية",
+        "ب": "بطاقة بريدية",
+        "ج": "بطاقة هدية"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 167,
+      "question": "some friends of mine ——- building their house. They hope to finish it next summer",
+      "options": {
+        "أ": "are",
+        "ب": "have",
+        "ج": "do",
+        "د": "were"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 168,
+      "question": "I wasn't at home yesterday",
+      "options": {
+        "أ": "claim",
+        "ب": "apologize",
+        "ج": "refuse",
+        "د": "protest"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 169,
+      "question": "John: The assignment is due next Monday and I'm still working on the introduction!",
+      "options": {
+        "أ": "John will submit assignment on time",
+        "ب": "John is late",
+        "ج": "John doesn't want to work on the introduction",
+        "د": "there is much time left tor John"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 170,
+      "question": "Vet is",
+      "options": {
+        "أ": "someone who takes care of plants",
+        "ب": "someone who takes care of animals",
+        "ج": "someone who writes stories"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 171,
+      "question": "The past participle of the verb \"took\" is",
+      "options": {
+        "أ": "taken",
+        "ب": "takes",
+        "ج": "taking"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 172,
+      "question": "معنى Did you get it ?",
+      "options": {
+        "أ": "هل ذهبت اليك",
+        "ب": "هل قمت بتسليمها",
+        "ج": "هل وصلت لك"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 173,
+      "question": "My son is",
+      "options": {
+        "أ": "friend",
+        "ب": "family member",
+        "ج": "co-worker"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 174,
+      "question": "The opposite of \"found\"",
+      "options": {
+        "أ": "look for",
+        "ب": "fix",
+        "ج": "lost"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 175,
+      "question": "معنى glasses",
+      "options": {
+        "أ": "نظارات طبية",
+        "ب": "نظارات شمسية",
+        "ج": "نافذة"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 176,
+      "question": "under is",
+      "options": {
+        "أ": "prepositions",
+        "ب": "adverb",
+        "ج": "verb"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 177,
+      "question": "- Yes, I'd love to come to the concert with you.",
+      "options": {
+        "أ": "Expressing sympathy",
+        "ب": "Accepting invitations",
+        "ج": "Declining invitations",
+        "د": "Making a suggestion"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 178,
+      "question": "—————- apples are left in the fridge?",
+      "options": {
+        "أ": "How much",
+        "ب": "How many",
+        "ج": "How far",
+        "د": "How tall"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 179,
+      "question": "—————- jacket you like more? The red one or the black one",
+      "options": {
+        "أ": "Which",
+        "ب": "Why",
+        "ج": "How",
+        "د": "What"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 180,
+      "question": "He studied hard ————he passed the test",
+      "options": {
+        "أ": "But",
+        "ب": "So",
+        "ج": "Never",
+        "د": "Although"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 181,
+      "question": "Hassan: I need to lose wight, I’m becoming heavy these days. Sara……………………….",
+      "options": {
+        "أ": "Ok sleep more",
+        "ب": "OK start with simple step, stop eating bread for example",
+        "ج": "OK don’t go the gym anymore",
+        "د": "OK sweet is a good diet"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 182,
+      "question": "What did Samantha did after work?",
+      "options": {
+        "أ": "she ate Pizza",
+        "ب": "She ordered Pizza",
+        "ج": "She sliced the Pizza"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 183,
+      "question": "Who did Katie go with on Friday?",
+      "options": {
+        "أ": "she went with Samantha",
+        "ب": "She went with Bobby",
+        "ج": "She went with Ben"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 184,
+      "question": "His Mother",
+      "options": {
+        "أ": "Procession pronoun",
+        "ب": "subject pronoun",
+        "ج": "reflective pronoun"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 185,
+      "question": "The present form of the verb \"felt\" is",
+      "options": {
+        "أ": "feel",
+        "ب": "feeled",
+        "ج": "full"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 186,
+      "question": "Christine",
+      "options": {
+        "أ": "Mother",
+        "ب": "sister",
+        "ج": "wife"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 187,
+      "question": "I read ------------- newspaper articles last week but I didn't read any books",
+      "options": {
+        "أ": "Few",
+        "ب": "A little",
+        "ج": "Some",
+        "د": "Much"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 188,
+      "question": "I have been absent_____the whole week",
+      "options": {
+        "أ": "During",
+        "ب": "Since",
+        "ج": "For",
+        "د": "From"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 189,
+      "question": "He is a teacher --------------- that is his brother",
+      "options": {
+        "أ": "If",
+        "ب": "Or",
+        "ج": "And",
+        "د": "That"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 190,
+      "question": "If it rains tomorrow, I----------------- my raincoat",
+      "options": {
+        "أ": "Wear",
+        "ب": "Am wear",
+        "ج": "Will wear",
+        "د": "Going to wear"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 191,
+      "question": "Next Sunday will be a holiday",
+      "options": {
+        "أ": "To regret",
+        "ب": "To announce",
+        "ج": "To hope",
+        "د": "To advice"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 192,
+      "question": "مرادف set free",
+      "options": {
+        "أ": "release",
+        "ب": "clean",
+        "ج": "fix"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 193,
+      "question": "معنى liberate",
+      "options": {
+        "أ": "يوصل",
+        "ب": "يحرر",
+        "ج": "يساعد"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 194,
+      "question": "معنى trapped",
+      "options": {
+        "أ": "محموم",
+        "ب": "مهووس",
+        "ج": "محصور"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 195,
+      "question": "Judy was sad for",
+      "options": {
+        "أ": "the exam",
+        "ب": "the trapped bird",
+        "ج": "the injured bird"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 196,
+      "question": "the bird was trapped in",
+      "options": {
+        "أ": "cage",
+        "ب": "box",
+        "ج": "shelf"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 197,
+      "question": "كلمة average تعني",
+      "options": {
+        "أ": "مغفل",
+        "ب": "معدل",
+        "ج": "محسن"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 198,
+      "question": "عندما نقول per year نقصد بها",
+      "options": {
+        "أ": "بالسنة",
+        "ب": "كل سنة",
+        "ج": "خلال السنة"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 199,
+      "question": "معنى مصاريف شخصية",
+      "options": {
+        "أ": "people money",
+        "ب": "personal life",
+        "ج": "personal expenses"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 200,
+      "question": "education cost is high",
+      "options": {
+        "أ": "false",
+        "ب": "true"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 201,
+      "question": "the verb travel means",
+      "options": {
+        "أ": "to walk in the park",
+        "ب": "to drive to school",
+        "ج": "to move to another country"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 202,
+      "question": "I saw ———— car keys on the shelf",
+      "options": {
+        "أ": "one",
+        "ب": "many"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 203,
+      "question": "where ———- ?",
+      "options": {
+        "أ": "works Tom",
+        "ب": "Tom works",
+        "ج": "Tom does work",
+        "د": "does Tom work"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 204,
+      "question": "—————- to Canada? yes, 2 years ago",
+      "options": {
+        "أ": "Do you ever go",
+        "ب": "did you ever go",
+        "ج": "have you ever been",
+        "د": "are you ever going"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 205,
+      "question": "what time is it? I have no —————",
+      "options": {
+        "أ": "time",
+        "ب": "idea",
+        "ج": "answer",
+        "د": "opinion"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 206,
+      "question": "The meal was very expensive. Look at the ————",
+      "options": {
+        "أ": "ticket",
+        "ب": "invoice",
+        "ج": "receipt",
+        "د": "bill"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 207,
+      "question": "if only I hadn't bought this laptop",
+      "options": {
+        "أ": "to wish",
+        "ب": "to regret",
+        "ج": "to feel sad",
+        "د": "to warn"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 208,
+      "question": "The opposite of private is",
+      "options": {
+        "أ": "open",
+        "ب": "public"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 209,
+      "question": "مصطلح none of your business لا نترجمه حرفيا ونقصد به",
+      "options": {
+        "أ": "عملك التجاري",
+        "ب": "لا تتدخل بالموضوع",
+        "ج": "كم السعر"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 210,
+      "question": "لماذا استخدمنا how much",
+      "options": {
+        "أ": "بسبب وجود شي يدل على السعر مثل الفعل cost",
+        "ب": "بسبب وجود كلمة معدودة"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 211,
+      "question": "Speaker A:..................... Speaker B: Yes it is Spring",
+      "options": {
+        "أ": "Merry Christmas",
+        "ب": "the weather is chilly",
+        "ج": "It is too hot",
+        "د": "What a lovely flowry morning"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 212,
+      "question": "A:What a storm! B: yes it is rainig cats and dogs",
+      "options": {
+        "أ": "Heavy snow",
+        "ب": "Heavy rain",
+        "ج": "Sunny weather",
+        "د": "Dust storm"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 213,
+      "question": "It's my birthday---‐----------Friday",
+      "options": {
+        "أ": "In",
+        "ب": "On",
+        "ج": "By",
+        "د": "At"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 214,
+      "question": "Even if she doesn't talk to me, I just don't care anymore",
+      "options": {
+        "أ": "To express agreement",
+        "ب": "To express opinion",
+        "ج": "To express indiffernce",
+        "د": "To wish"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 215,
+      "question": "Ask someone about the time",
+      "options": {
+        "أ": "What is time does?",
+        "ب": "What is the time?",
+        "ج": "The time is what?",
+        "د": "Is the time what,"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 216,
+      "question": "A: Lets watch a film tonight! B: good idea",
+      "options": {
+        "أ": "To express regret",
+        "ب": "To greet",
+        "ج": "To agreement",
+        "د": "To express like"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 217,
+      "question": "Why people set an alarm?",
+      "options": {
+        "أ": "to wake up on time",
+        "ب": "to sleep more"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 218,
+      "question": "the opposite of early is:",
+      "options": {
+        "أ": "too early",
+        "ب": "late"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 219,
+      "question": "to go to bed means:",
+      "options": {
+        "أ": "to sleep",
+        "ب": "to eat dinner"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 220,
+      "question": "(I have to) :",
+      "options": {
+        "أ": "obligation",
+        "ب": "non-obligation"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 221,
+      "question": "The team ………….. winning the game",
+      "options": {
+        "أ": "Is",
+        "ب": "Are",
+        "ج": "Am"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 222,
+      "question": "Jamila———— from Iraq",
+      "options": {
+        "أ": "Are",
+        "ب": "Is"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 223,
+      "question": "Can I take another box?",
+      "options": {
+        "أ": "Regret",
+        "ب": "Wish",
+        "ج": "Request"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 224,
+      "question": "where is Dina? -----------------------",
+      "options": {
+        "أ": "She goes to the market",
+        "ب": "She has gone to the market",
+        "ج": "She is",
+        "د": "She was"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 225,
+      "question": "A vegetarian is someone--------------- doesn't eat meat",
+      "options": {
+        "أ": "Who",
+        "ب": "What",
+        "ج": "Which",
+        "د": "Whose"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 226,
+      "question": "I wish I ------------- more money",
+      "options": {
+        "أ": "Have",
+        "ب": "Had",
+        "ج": "Would have",
+        "د": "Was having"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 227,
+      "question": "Sorry, but my hands are dirty. I --------------- in the garden",
+      "options": {
+        "أ": "Working",
+        "ب": "Work",
+        "ج": "Have been working",
+        "د": "Works"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 228,
+      "question": "I lost my keys, they must ----------- somewhere.",
+      "options": {
+        "أ": "Was",
+        "ب": "Been",
+        "ج": "Is",
+        "د": "Be"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 229,
+      "question": "This(maybe) the reason they don't go the party",
+      "options": {
+        "أ": "Uncertainty",
+        "ب": "Certainty",
+        "ج": "Welcome",
+        "د": "Sugfesrion"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 230,
+      "question": "Would you please close the door? Yes of course",
+      "options": {
+        "أ": "Suggest",
+        "ب": "Apologize",
+        "ج": "Infer",
+        "د": "Request"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 231,
+      "question": "The team of tennis was so bad. Yes of course",
+      "options": {
+        "أ": "Agree",
+        "ب": "Suggest",
+        "ج": "Advice",
+        "د": "Regret"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 232,
+      "question": "James: May I borrow your bicycle? David-----------------------------( to decline)",
+      "options": {
+        "أ": "Can you wait a while",
+        "ب": "I have lost my bicycle",
+        "ج": "I'm sorry I can't lend it to you",
+        "د": "Yes take it"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 233,
+      "question": "Speaker 1: Boy ( Shall I) carry some of these bags? Speaker 2: Old man, yes, please",
+      "options": {
+        "أ": "to request",
+        "ب": "to express thanks",
+        "ج": "to ask for help",
+        "د": "to offer help"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 234,
+      "question": "Woman: Are you ready for this? Man: I should be. I’ve been working hard for the past three days. Q: What does the man mean?",
+      "options": {
+        "أ": "He should have prepared more",
+        "ب": "He is very worried",
+        "ج": "He has been studying a lot",
+        "د": "He needs a few more days"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 235,
+      "question": "Nina: Why are you always complaining about your parents? Mark: Well, because they never stop criticizing me. Q: who is criticizing Mark?",
+      "options": {
+        "أ": "his friends",
+        "ب": "his sister",
+        "ج": "his father and mother",
+        "د": "his teacher"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 236,
+      "question": "Man: The paper isn’t due until next week. Woman: Yes I know but I Wanted to turn it in a head of time if that is all right. What does the woman mean?",
+      "options": {
+        "أ": "She wants to submit her paper early",
+        "ب": "Answers on paper are all correct",
+        "ج": "The deadline has passed for the paper",
+        "د": "The paper is not quite finished"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 237,
+      "question": "Woman: Why is Barbara feeling so happy? Man: she just started working in a real good company. What does the man say about Barbara?",
+      "options": {
+        "أ": "She always likes her job in the company",
+        "ب": "She began a new job",
+        "ج": "She bought a new company",
+        "د": "She got married"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 238,
+      "question": "David: Shall we watch the football match tonight in a cafe? Victoria: it is a quite nice idea, we could go there. Q: What is the topic of the conversation.",
+      "options": {
+        "أ": "David and Victoria like to watch football.",
+        "ب": "Discussion about work",
+        "ج": "They would like to play basketball in the afternoon.",
+        "د": "They want to go home"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 239,
+      "question": "Brad’s class is learning about:",
+      "options": {
+        "أ": "rain water",
+        "ب": "the cycle way of water",
+        "ج": "life cycle",
+        "د": "Oceans life"
+      },
+      "correct_answer": "ب"
+    },
+    {
+      "id": 240,
+      "question": "How does the water get evaporated?",
+      "options": {
+        "أ": "By sun heat",
+        "ب": "By evaporating water",
+        "ج": "by filling oceans",
+        "د": "by snow"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 241,
+      "question": "Precipitation is",
+      "options": {
+        "أ": "The percentage of rain water",
+        "ب": "The percentage of clouds",
+        "ج": "The percentage of sun light",
+        "د": "The percentage of wind"
+      },
+      "correct_answer": "أ"
+    },
+    {
+      "id": 242,
+      "question": "The process of condensing water results in",
+      "options": {
+        "أ": "Earthquakes",
+        "ب": "Storms",
+        "ج": "dust",
+        "د": "clouds"
+      },
+      "correct_answer": "د"
+    },
+    {
+      "id": 243,
+      "question": "according to the passage, in the end, where does the water flow?",
+      "options": {
+        "أ": "To the clouds",
+        "ب": "into wells",
+        "ج": "to Oceans",
+        "د": "to sewers"
+      },
+      "correct_answer": "ج"
+    },
+    {
+      "id": 244,
+      "question": "مرادف كلمة end هي:",
+      "options": {
+        "أ": "start",
+        "ب": "begin",
+        "ج": "finish"
+      },
+      "correct_answer": "ج"
+    }
+  ]
+}
