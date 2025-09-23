@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة التدريب على الامتحانات الكفائات</title>
+    <title>منصة التدريب على الامتحانات</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         :root {
             --primary-color: #4361ee;
@@ -490,7 +488,6 @@
                 font-size: 1rem;
             }
         }
-
         /* نص حقوق النشر */
         .copyright {
             text-align: center;
@@ -503,7 +500,6 @@
         .dark-mode .copyright {
             color: #a0aec0;
         }
-
         /* شاشة التحميل */
         .loading-overlay {
             position: fixed;
@@ -533,50 +529,87 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
         /* نموذج إدخال الاسم */
-        .name-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+        .name-form-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 2000;
+            min-height: 80vh;
+            padding: 2rem;
         }
         .name-form {
             background: var(--card-bg);
             padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            width: 100%;
             max-width: 500px;
-            width: 90%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
         }
         .name-form h2 {
             margin-bottom: 1.5rem;
             color: var(--primary-color);
+            font-size: 1.8rem;
         }
-        .name-input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid var(--option-border);
-            border-radius: 8px;
-            font-size: 1.1rem;
+        .form-group {
             margin-bottom: 1.5rem;
-            font-family: 'Cairo', sans-serif;
-            text-align: center;
+            text-align: right;
         }
-        .name-input:focus {
-            border-color: var(--primary-color);
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--option-border);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: border-color 0.3s;
+        }
+        .form-control:focus {
             outline: none;
+            border-color: var(--primary-color);
+        }
+        .btn-submit-name {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-submit-name:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        .form-error {
+            color: var(--incorrect);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            text-align: right;
+            display: none;
+        }
+        /* زر تنزيل الشهادة */
+        .btn-download-certificate {
+            background: var(--success-color);
+            color: var(--white);
+        }
+        .btn-download-certificate:hover {
+            background: #3ab6d8;
+            transform: translateY(-2px);
         }
 
-        /* شهادة التخرج */
-        .certificate {
+        /* معاينة الشهادة - تصميم محسن */
+        .certificate-preview {
             display: none;
             position: fixed;
             top: 0;
@@ -589,21 +622,23 @@
             align-items: center;
             flex-direction: column;
             padding: 20px;
+            overflow: auto;
         }
         .certificate-content {
             background: white;
             width: 100%;
             max-width: 800px;
-            padding: 40px;
+            padding: 20px;
             border-radius: 15px;
             text-align: center;
             position: relative;
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            margin: 20px 0;
         }
         .certificate-close {
             position: absolute;
-            top: 15px;
-            left: 15px;
+            top: 10px;
+            left: 10px;
             background: var(--primary-color);
             color: white;
             border: none;
@@ -612,32 +647,45 @@
             height: 40px;
             cursor: pointer;
             font-size: 1.2rem;
+            z-index: 10;
+        }
+        .certificate-image-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+            height: 565px; /* ارتفاع مناسب لصورة A4 */
+            overflow: hidden;
         }
         .certificate-image {
-            max-width: 100%;
-            margin-bottom: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
         }
+        /* عناصر نصية موضوعة بدقة على الشهادة */
         .certificate-name {
             position: absolute;
-            top: 45%;
+            top: 47%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             color: #2b2d42;
             width: 80%;
             text-align: center;
+            font-family: 'Cairo', sans-serif;
         }
-        .certificate-details {
+        .certificate-subject {
             position: absolute;
-            bottom: 20%;
+            top: 86%;
             left: 50%;
-            transform: translateX(-50%);
-            font-size: 18px;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
             color: #2b2d42;
             width: 80%;
             text-align: center;
-            line-height: 1.6;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
         }
         .certificate-watermark {
             position: absolute;
@@ -650,27 +698,76 @@
             pointer-events: none;
             z-index: 1;
         }
+        .certificate-score-display {
+            position: absolute;
+            top: 76%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: 700;
+            color: #e71d36;
+            background: transparent;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 2px solid #3a0ca3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-family: 'Cairo', sans-serif;
+            width: auto;
+            min-width: 120px;
+            text-align: center;
+        }
+        .certificate-date-display {
+            position: absolute;
+            top: 75%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            font-weight: 600;
+            color: #2b2d42;
+            background: transparent;
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 2px solid #4361ee;
+            font-family: 'Cairo', sans-serif;
+            width: auto;
+            min-width: 180px;
+            text-align: center;
+        }
+        .certificate-download-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
-    <!-- نموذج إدخال الاسم -->
-    <div class="name-modal" id="name-modal">
+    <!-- نموذج إدخال الاسم (يظهر أولاً) -->
+    <div class="name-form-container" id="name-form-container">
         <div class="name-form">
-            <h2>مرحباً بك في منصة التدريب على الامتحانات الكفائات</h2>
-            <p>الرجاء إدخال اسمك الثلاثي للمتابعة</p>
-            <input type="text" class="name-input" id="student-name" placeholder="الاسم الثلاثي">
-            <button class="btn btn-primary" id="save-name-btn">حفظ والمتابعة</button>
+            <h2>مرحبًا بك في منصة التدريب</h2>
+            <p>يرجى إدخال اسمك الثلاثي بالعربية لإصدار الشهادة</p>
+            <form id="student-name-form">
+                <div class="form-group">
+                    <label for="student-name-ar">الاسم الثلاثي (بالعربية):</label>
+                    <input type="text" id="student-name-ar" class="form-control" placeholder="مثال: أحمد محمد علي" required>
+                    <div class="form-error" id="error-ar">يرجى إدخال الاسم الثلاثي بالعربية</div>
+                </div>
+                <button type="submit" class="btn-submit-name">
+                    <i class="fas fa-user-check"></i> بدء الاختبار
+                </button>
+            </form>
         </div>
     </div>
 
-    <div class="container">
+    <!-- المحتوى الرئيسي (مخفي حتى إدخال الاسم) -->
+    <div class="container" id="main-container" style="display: none;">
         <!-- زر الوضع الليلي -->
         <button class="theme-toggle" id="theme-toggle">
             <i class="fas fa-moon"></i>
         </button>
         <!-- الهيدر -->
         <div class="header">
-            <h1>منصة التدريب على الامتحانات الكفائات </h1>
+            <h1>منصة التدريب على الامتحانات</h1>
             <p>اختر المادة للبدء في التدريب على الأسئلة</p>
         </div>
         <!-- قسم المواد -->
@@ -727,14 +824,14 @@
         <div class="results-container" id="results-container">
             <div class="results-header">
                 <h2 class="results-title">نتيجة الاختبار</h2>
-                <p>لقد أكملت الاختبار  هي نتيجتك</p>
+                <p>لقد أكملت الاختبار بنجاح، إليك نتيجتك</p>
             </div>
             <div class="score-container">
                 <div class="score-value" id="score-value">0</div>
                 <div class="score-total">من 100</div>
             </div>
             <div class="wrong-answers" id="wrong-answers-container">
-                <h3 class="wrong-title">الأسئلة التي underperformed فيها</h3>
+                <h3 class="wrong-title">الأسئلة التي أخطأت فيها</h3>
                 <!-- سيتم إضافة الأسئلة الخاطئة هنا عبر JavaScript -->
             </div>
             <div class="results-actions">
@@ -744,8 +841,8 @@
                 <button class="btn btn-change" id="try-again-btn">
                     <i class="fas fa-sync-alt"></i> توليد أسئلة جديدة
                 </button>
-                <button class="btn btn-primary" id="generate-certificate-btn">
-                    <i class="fas fa-download"></i> تحميل الشهادة
+                <button class="btn btn-download-certificate" id="download-certificate-btn">
+                    <i class="fas fa-certificate"></i> تنزيل الشهادة
                 </button>
             </div>
         </div>
@@ -761,40 +858,50 @@
         <div>جارٍ تحميل الأسئلة...</div>
     </div>
 
-    <!-- معاينة الشهادة -->
-    <div class="certificate" id="certificate-preview">
+    <!-- معاينة الشهادة - التصميم الجديد -->
+    <div class="certificate-preview" id="certificate-preview">
         <div class="certificate-content">
             <button class="certificate-close" id="certificate-close">
                 <i class="fas fa-times"></i>
             </button>
-            <div id="certificate-template">
-                <img src="E.png" class="certificate-image" id="certificate-img">
+            <div class="certificate-image-container">
+                <img src="sdfe.png" class="certificate-image" id="certificate-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDgwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZmZmZmZmIi8+Cjx0ZXh0IHg9IjQwMCIgeT0iMzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiMzMzMiPue1kOe1kCDntZDntZDntZDntZA8L3RleHQ+Cjwvc3ZnPgo='">
                 <div class="certificate-name" id="certificate-name"></div>
-                <div class="certificate-details" id="certificate-details"></div>
+                <div class="certificate-subject" id="certificate-subject"></div>
+                <div class="certificate-score-display" id="certificate-score"></div>
+                <div class="certificate-date-display" id="certificate-date"></div>
                 <div class="certificate-watermark" id="certificate-watermark"></div>
             </div>
-            <button class="btn btn-primary" id="download-certificate-btn" style="margin-top: 20px;">
+            <button class="btn btn-primary certificate-download-btn" id="final-download-certificate-btn">
                 <i class="fas fa-download"></i> تحميل الشهادة كPDF
             </button>
         </div>
     </div>
 
+    <!-- تضمين مكتبات jsPDF و html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
         // بيانات المواد
         const subjects = [
-            { id: 'arabic', name: 'اللغة العربية', icon: 'book' },
-            { id: 'english', name: 'اللغة الإنجليزية', icon: 'language' },
-            { id: 'computer', name: 'الحاسوب', icon: 'laptop-code' }
+            { id: 'arabic', name: 'اللغة العربية', nameEn: 'Arabic Language', icon: 'book' },
+            { id: 'english', name: 'اللغة الإنجليزية', nameEn: 'English Language', icon: 'language' },
+            { id: 'computer', name: 'الحاسوب', nameEn: 'Computer Science', icon: 'laptop-code' }
         ];
-
-        // بنوك الأسئلة (ستتم ملؤها من الملفات JSON)
+        
+        // بنوك الأسئلة
         const questionBanks = {
             computer: [],
             arabic: [],
             english: []
         };
-
+        
         // عناصر DOM
+        const nameFormContainer = document.getElementById('name-form-container');
+        const mainContainer = document.getElementById('main-container');
+        const studentNameForm = document.getElementById('student-name-form');
+        const studentNameAr = document.getElementById('student-name-ar');
+        const errorAr = document.getElementById('error-ar');
         const themeToggle = document.getElementById('theme-toggle');
         const subjectsContainer = document.getElementById('subjects-container');
         const quizContainer = document.getElementById('quiz-container');
@@ -811,17 +918,16 @@
         const wrongAnswersContainer = document.getElementById('wrong-answers-container');
         const restartBtn = document.getElementById('restart-btn');
         const tryAgainBtn = document.getElementById('try-again-btn');
+        const downloadCertificateBtn = document.getElementById('download-certificate-btn');
         const loadingOverlay = document.getElementById('loading-overlay');
-        const nameModal = document.getElementById('name-modal');
-        const studentNameInput = document.getElementById('student-name');
-        const saveNameBtn = document.getElementById('save-name-btn');
-        const generateCertificateBtn = document.getElementById('generate-certificate-btn');
         const certificatePreview = document.getElementById('certificate-preview');
         const certificateClose = document.getElementById('certificate-close');
         const certificateName = document.getElementById('certificate-name');
-        const certificateDetails = document.getElementById('certificate-details');
+        const certificateSubject = document.getElementById('certificate-subject');
+        const certificateScore = document.getElementById('certificate-score');
+        const certificateDate = document.getElementById('certificate-date');
         const certificateWatermark = document.getElementById('certificate-watermark');
-        const downloadCertificateBtn = document.getElementById('download-certificate-btn');
+        const finalDownloadCertificateBtn = document.getElementById('final-download-certificate-btn');
         const certificateImg = document.getElementById('certificate-img');
 
         // متغيرات التطبيق
@@ -830,124 +936,144 @@
         let currentSetIndex = 0;
         let userAnswers = [];
         let score = 0;
+        let studentName = {
+            ar: ''
+        };
         const questionsPerSet = 10;
         const totalQuestions = 40;
         const totalSets = 4;
         const pointsPerQuestion = 2.5;
+        const passingScore = 50;
         let usedQuestionIndices = new Set();
-        let studentName = '';
 
         // تهيئة الصفحة
         async function init() {
-            // التحقق إذا كان الاسم محفوظاً مسبقاً
-            const savedName = localStorage.getItem('studentName');
-            if (savedName) {
-                studentName = savedName;
-                nameModal.style.display = 'none';
+            const savedNameAr = localStorage.getItem('studentNameAr');
+            if (savedNameAr) {
+                studentName.ar = savedNameAr;
+                showMainContent();
+                await loadQuestionBanks();
+                setupEventListeners();
+                loadThemePreference();
             } else {
-                nameModal.style.display = 'flex';
+                setupNameForm();
             }
-            
-            setupEventListeners();
-            loadThemePreference();
-            await loadQuestionBanks(); // تحميل بنوك الأسئلة عند بدء التشغيل
         }
 
-        // تحميل بنوك الأسئلة من الملفات JSON
+        // إعداد نموذج الاسم
+        function setupNameForm() {
+            studentNameForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                validateAndSubmitName();
+            });
+        }
+
+        // التحقق من صحة الاسم وإرساله
+        function validateAndSubmitName() {
+            let isValid = true;
+            const arName = studentNameAr.value.trim();
+            if (!arName || arName.split(' ').length < 3) {
+                errorAr.style.display = 'block';
+                isValid = false;
+            } else {
+                errorAr.style.display = 'none';
+            }
+            if (isValid) {
+                studentName.ar = arName;
+                localStorage.setItem('studentNameAr', arName);
+                showMainContent();
+                loadQuestionBanks().then(() => {
+                    setupEventListeners();
+                    loadThemePreference();
+                });
+            }
+        }
+
+        // عرض المحتوى الرئيسي
+        function showMainContent() {
+            nameFormContainer.style.display = 'none';
+            mainContainer.style.display = 'block';
+        }
+
+        // تحميل بنوك الأسئلة
         async function loadQuestionBanks() {
             try {
                 showLoading(true);
-                const response = await fetch('computer.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+                
+                // تحميل أسئلة الحاسوب
+                let response = await fetch('computer.json');
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const computerData = await response.json();
+                const convertedComputerQuestions = convertQuestionsFormat(computerData.questions);
+                questionBanks.computer = convertedComputerQuestions;
+                
+                // تحميل أسئلة الإنجليزية (إذا وجد)
+                try {
+                    response = await fetch('English.json');
+                    if (response.ok) {
+                        const englishData = await response.json();
+                        const convertedEnglishQuestions = convertQuestionsFormat(englishData.questions);
+                        questionBanks.english = convertedEnglishQuestions;
+                    }
+                } catch (error) {
+                    console.warn('لم يتم العثور على ملف English.json:', error);
                 }
-                const data = await response.json();
                 
-                // تحويل الهيكل من التنسيق الجديد إلى التنسيق القديم المستخدم في الكود
-                const convertedQuestions = data.questions.map(q => {
-                    // تحويل الخيارات من كائن إلى مصفوفة
-                    const optionsArray = Object.values(q.options);
-                    // إيجاد الفهرس الصحيح للإجابة الصحيحة
-                    const correctIndex = Object.keys(q.options).indexOf(q.correct_answer);
-                    
-                    return {
-                        question: q.question,
-                        options: optionsArray,
-                        correct: correctIndex
-                    };
-                });
-                
-                questionBanks.computer = convertedQuestions;
-                console.log('تم تحميل أسئلة الحاسوب بنجاح. عدد الأسئلة:', questionBanks.computer.length);
+                console.log('تم تحميل بنوك الأسئلة بنجاح.');
             } catch (error) {
-                console.error('خطأ في تحميل ملف computer.json:', error);
-                // إنشاء بعض الأسئلة الافتراضية في حالة فشل التحميل
+                console.error('خطأ في تحميل ملفات الأسئلة:', error);
+                alert('حدث خطأ أثناء تحميل الأسئلة. سيتم استخدام الأسئلة الافتراضية.');
                 questionBanks.computer = [
                     {
                         question: "ما هو المكون الرئيسي في الحاسوب الذي ينفذ التعليمات؟",
                         options: ["لوحة الأم", "المعالج", "القرص الصلب", "الذاكرة العشوائية"],
                         correct: 1
-                    },
-                    {
-                        question: "أي من هذه ليست لغة برمجة؟",
-                        options: ["بايثون", "جافا", "كوبول", "مايكروسوفت"],
-                        correct: 3
-                    },
-                    {
-                        question: "ما هو نظام التشغيل الأكثر استخداماً في الحواسيب الشخصية؟",
-                        options: ["Linux", "macOS", "Windows", "Chrome OS"],
-                        correct: 2
                     }
                 ];
-                alert('تم تحميل أسئلة افتراضية بسبب عدم وجود ملف الأسئلة.');
             } finally {
                 showLoading(false);
             }
         }
 
+        // تحويل تنسيق الأسئلة
+        function convertQuestionsFormat(questions) {
+            return questions.map(q => {
+                const optionsArray = Object.values(q.options);
+                const correctIndex = Object.keys(q.options).indexOf(q.correct_answer);
+                return {
+                    question: q.question,
+                    options: optionsArray,
+                    correct: correctIndex
+                };
+            });
+        }
+
         // إعداد مستمعي الأحداث
         function setupEventListeners() {
-            // مستمعي أحداث بطاقات المواد
             document.querySelectorAll('.subject-card').forEach(card => {
                 card.addEventListener('click', () => {
                     const subject = card.getAttribute('data-subject');
                     startQuiz(subject);
                 });
             });
-            // مستمعي أحداث الأزرار
             prevSetBtn.addEventListener('click', showPreviousSet);
             nextSetBtn.addEventListener('click', showNextSet);
             changeQuestionsBtn.addEventListener('click', changeQuestions);
             submitBtn.addEventListener('click', submitQuiz);
             restartBtn.addEventListener('click', restartQuiz);
             tryAgainBtn.addEventListener('click', tryAgain);
-            generateCertificateBtn.addEventListener('click', generateCertificate);
+            downloadCertificateBtn.addEventListener('click', showCertificatePreview);
             certificateClose.addEventListener('click', () => {
                 certificatePreview.style.display = 'none';
             });
-            downloadCertificateBtn.addEventListener('click', downloadCertificate);
-            saveNameBtn.addEventListener('click', saveStudentName);
-            // مستمعي أحداث نقاط المجموعات
+            finalDownloadCertificateBtn.addEventListener('click', downloadCertificateAsPDF);
             document.querySelectorAll('.set-dot').forEach(dot => {
                 dot.addEventListener('click', () => {
                     const setIndex = parseInt(dot.getAttribute('data-set'));
                     goToSet(setIndex);
                 });
             });
-            // مستمع حدث زر الوضع الليلي
             themeToggle.addEventListener('click', toggleTheme);
-        }
-
-        // حفظ اسم الطالب
-        function saveStudentName() {
-            const name = studentNameInput.value.trim();
-            if (name) {
-                studentName = name;
-                localStorage.setItem('studentName', name);
-                nameModal.style.display = 'none';
-            } else {
-                alert('الرجاء إدخال اسمك الثلاثي');
-            }
         }
 
         // تبديل الوضع الليلي/النهاري
@@ -955,7 +1081,6 @@
             document.body.classList.toggle('dark-mode');
             const isDarkMode = document.body.classList.contains('dark-mode');
             localStorage.setItem('darkMode', isDarkMode);
-            // تغيير الأيقونة
             const icon = themeToggle.querySelector('i');
             if (isDarkMode) {
                 icon.classList.remove('fa-moon');
@@ -981,17 +1106,16 @@
         function startQuiz(subject) {
             currentSubject = subject;
             generateNewQuestions();
-            // تحديث واجهة المستخدم
             subjectsContainer.style.display = 'none';
             quizContainer.style.display = 'block';
             resultsContainer.style.display = 'none';
-            // تحديث عنوان الاختبار
-            const subjectName = subjects.find(s => s.id === subject)?.name || 'الاختبار';
+            const subjectInfo = subjects.find(s => s.id === subject);
+            const subjectName = subjectInfo?.name || 'الاختبار';
             quizTitle.textContent = `اختبار ${subjectName}`;
             showSet(0);
         }
 
-        // توليد أسئلة جديدة بدون تكرار
+        // توليد أسئلة جديدة
         function generateNewQuestions() {
             usedQuestionIndices.clear();
             currentQuestions = [];
@@ -1001,11 +1125,10 @@
             const questionBank = questionBanks[currentSubject] || questionBanks.computer;
             
             if (questionBank.length === 0) {
-                alert('لا توجد أسئلة متاحة لهذه المادة. يرجى المحاولة لاحقًا.');
+                alert('لا توجد أسئلة متاحة لهذه المادة.');
                 return;
             }
 
-            // خلط المؤشرات عشوائياً
             const indices = [];
             for (let i = 0; i < questionBank.length; i++) {
                 indices.push(i);
@@ -1015,28 +1138,22 @@
                 [indices[i], indices[j]] = [indices[j], indices[i]];
             }
             
-            // اختيار الأسئلة الأصلية أولاً
             for (let i = 0; i < Math.min(totalQuestions, questionBank.length); i++) {
-                currentQuestions.push({...questionBank[indices[i]]}); // نسخة لتجنب التعديل الأصلي
+                currentQuestions.push({...questionBank[indices[i]]});
                 usedQuestionIndices.add(indices[i]);
             }
             
-            // إذا لم يكن لدينا ما يكفي من الأسئلة، نبدأ بإنشاء أسئلة معدلة
             if (currentQuestions.length < totalQuestions) {
                 let questionId = 1;
                 while (currentQuestions.length < totalQuestions) {
-                    // نأخذ سؤالاً من البداية ونعدل عليه
                     const originalIndex = (questionId - 1) % questionBank.length;
                     const originalQuestion = questionBank[originalIndex];
-                    
-                    // إنشاء نسخة معدلة (الرقم مخفي عن المستخدم، يستخدم فقط داخلياً)
                     const modifiedQuestion = {
                         question: originalQuestion.question,
                         options: [...originalQuestion.options],
                         correct: originalQuestion.correct,
-                        internalId: `${originalIndex}-${questionId}` // معرف داخلي لمنع التكرار
+                        internalId: `${originalIndex}-${questionId}`
                     };
-                    
                     currentQuestions.push(modifiedQuestion);
                     questionId++;
                 }
@@ -1047,7 +1164,6 @@
         function changeQuestions() {
             generateNewQuestions();
             showSet(currentSetIndex);
-            // إظهار رسالة للمستخدم
             alert("تم توليد أسئلة جديدة للتدريب");
         }
 
@@ -1057,17 +1173,14 @@
             const startIndex = setIndex * questionsPerSet;
             const endIndex = startIndex + questionsPerSet;
             const setQuestions = currentQuestions.slice(startIndex, endIndex);
-            // تحديث واجهة المستخدم
             updateSetIndicator();
             updateQuestionCounter();
-            // عرض الأسئلة
             questionsContainer.innerHTML = '';
             setQuestions.forEach((question, index) => {
                 const globalIndex = startIndex + index;
                 const questionElement = createQuestionElement(question, globalIndex);
                 questionsContainer.appendChild(questionElement);
             });
-            // تحديث أزرار التنقل
             updateNavigationButtons();
         }
 
@@ -1106,7 +1219,7 @@
         // اختيار إجابة
         function selectOption(questionIndex, optionIndex) {
             userAnswers[questionIndex] = optionIndex;
-            showSet(currentSetIndex); // إعادة عرض المجموعة لتحديث الخيارات المحددة
+            showSet(currentSetIndex);
         }
 
         // تحديث مؤشر المجموعات
@@ -1159,7 +1272,6 @@
         function submitQuiz() {
             score = 0;
             const wrongAnswers = [];
-            // حساب النتيجة
             currentQuestions.forEach((question, index) => {
                 if (userAnswers[index] === question.correct) {
                     score += pointsPerQuestion;
@@ -1172,13 +1284,10 @@
                     });
                 }
             });
-            // عرض النتائج
             quizContainer.style.display = 'none';
             resultsContainer.style.display = 'block';
-            // عرض الدرجة النهائية
             scoreValue.textContent = score.toFixed(1);
-            // عرض الأسئلة الخاطئة
-            wrongAnswersContainer.innerHTML = '<h3 class="wrong-title">الأسئلة التي underperformed فيها</h3>';
+            wrongAnswersContainer.innerHTML = '<h3 class="wrong-title">الأسئلة التي أخطأت فيها</h3>';
             if (wrongAnswers.length > 0) {
                 wrongAnswers.forEach(item => {
                     const wrongAnswerElement = document.createElement('div');
@@ -1212,53 +1321,92 @@
             resultsContainer.style.display = 'none';
         }
 
-        // إنشاء الشهادة
-        function generateCertificate() {
-            // تعبئة بيانات الشهادة
-            certificateName.textContent = studentName;
+        // عرض معاينة الشهادة
+        function showCertificatePreview() {
+            certificateName.textContent = studentName.ar;
+            
+            // إضافة اسم المادة
+            const subjectInfo = subjects.find(s => s.id === currentSubject);
+            certificateSubject.textContent = `مادة: ${subjectInfo?.name || 'غير محدد'}`;
+            
+            certificateScore.textContent = `الدرجة: ${score.toFixed(1)}/100`;
             
             const currentDate = new Date().toLocaleDateString('ar-SA', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
             });
+            certificateDate.textContent = `التاريخ: ${currentDate}`;
             
-            const resultStatus = score >= 50 ? 'ناجح' : 'راسب';
-            certificateDetails.innerHTML = `
-                الدرجة: ${score.toFixed(1)}/100<br>
-                التاريخ: ${currentDate}<br>
-                النتيجة: ${resultStatus}
-            `;
-            
+            const resultStatus = score >= passingScore ? 'ناجح' : 'راسب';
             certificateWatermark.textContent = resultStatus;
-            if (resultStatus === 'ناجح') {
-                certificateWatermark.style.color = 'rgba(0, 128, 0, 0.1)';
-            } else {
-                certificateWatermark.style.color = 'rgba(255, 0, 0, 0.1)';
-            }
+            certificateWatermark.style.color = resultStatus === 'ناجح' ? 'rgba(0, 128, 0, 0.1)' : 'rgba(255, 0, 0, 0.1)';
             
-            // عرض معاينة الشهادة
             certificatePreview.style.display = 'flex';
         }
 
         // تحميل الشهادة كPDF
-        function downloadCertificate() {
+        async function downloadCertificateAsPDF() {
             const { jsPDF } = window.jspdf;
-            const doc = new jsPDF('landscape', 'mm', 'a4');
             
-            // استخدام html2canvas لالتقاط الشهادة كصورة
-            html2canvas(document.getElementById('certificate-template')).then(canvas => {
-                const imgData = canvas.toDataURL('image/png');
-                const imgProps = doc.getImageProperties(imgData);
-                const pdfWidth = doc.internal.pageSize.getWidth();
-                const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+            try {
+                showLoading(true);
                 
-                doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-                doc.save(`شهادة_${studentName}_${new Date().toISOString().slice(0, 10)}.pdf`);
+                // الانتظار حتى يتم تحميل الصورة بالكامل
+                await new Promise((resolve) => {
+                    if (certificateImg.complete) {
+                        resolve();
+                    } else {
+                        certificateImg.onload = resolve;
+                        certificateImg.onerror = resolve;
+                    }
+                });
+
+                // استخدام html2canvas لالتقاط الشهادة كصورة بدقة عالية
+                const canvas = await html2canvas(document.querySelector('.certificate-image-container'), {
+                    scale: 3, // زيادة الدقة
+                    useCORS: true,
+                    backgroundColor: null,
+                    logging: false,
+                    allowTaint: true,
+                    width: 396, // عرض ثابت للشهادة
+                    height: 562 // ارتفاع ثابت للشهادة (نسبة A4)
+                });
+
+                const imgData = canvas.toDataURL('image/png', 1.0);
                 
-                // إغلاق معاينة الشهادة بعد التحميل
+                // إنشاء PDF بحجم A4
+                const pdf = new jsPDF({
+                    orientation: 'portrait',
+                    unit: 'mm',
+                    format: 'a4'
+                });
+                
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                
+                // حساب الأبعاد للحفاظ على النسبة
+                const imgWidth = canvas.width;
+                const imgHeight = canvas.height;
+                const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+                const imgX = (pdfWidth - imgWidth * ratio) / 2;
+                const imgY = (pdfHeight - imgHeight * ratio) / 2;
+                
+                // إضافة الصورة إلى PDF مع الحفاظ على النسب
+                pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+                
+                // حفظ الملف
+                const fileName = `شهادة_${studentName.ar}_${score.toFixed(1)}_${new Date().toISOString().slice(0, 10)}.pdf`;
+                pdf.save(fileName);
+                
                 certificatePreview.style.display = 'none';
-            });
+                
+            } catch (error) {
+                console.error('خطأ في إنشاء الشهادة:', error);
+                alert('حدث خطأ أثناء إنشاء الشهادة. يرجى المحاولة مرة أخرى.');
+            } finally {
+                showLoading(false);
+            }
         }
 
         // عرض/إخفاء شاشة التحميل
@@ -1269,6 +1417,5 @@
         // تهيئة التطبيق عند تحميل الصفحة
         document.addEventListener('DOMContentLoaded', init);
     </script>
-    
 </body>
 </html>
